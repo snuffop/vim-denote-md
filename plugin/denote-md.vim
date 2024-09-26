@@ -166,8 +166,7 @@ function! s:DenoteFollowLink()
    if !s:IsValidDenoteFilename()
       return
    endif
-   "let l:pattern = '\[\[denote:\(\d\{8\}T\d\{6\}\)\]\]'
-   let l:pattern = '.+\(denote:(\d{8}T\d{6\})\)$'
+   let l:pattern = '\[\[denote:\(\d\{8\}T\d\{6\}\)\]\]'
    let l:line = getline('.')
    let l:col = col('.') - 1
    let l:matches = s:FindPatternMatches(l:pattern, l:line)
